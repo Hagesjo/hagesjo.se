@@ -1,7 +1,6 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="{% static 'main/reset.css' %}"/>
@@ -12,22 +11,27 @@
 
 	<body>
 		<header class="container group header">
-			<h1 class="logo"><a href="/">Andreas Hagesjö</a></h1>
+			<h1 class="logo">Andreas Hagesjö</h1>
 			<nav class="nav primary-nav">
 				<ul>
-					<li><a href="/about">About me</a><!--
-					--><li><a href="/portfolio">Portfolio</a><!--
-					--><li><a href="/contact">Contact me</a><!<--
+					{% block nav %}
+					<li><a href="/">About me</a><!--
 					--><li><a href="/links">Useful links</a>
+					{% endblock  %}
 				</ul>
 			</nav>
 		</header>
-		<section class="container main">
+		<section class="container main group">
 			{% block content %}
 				<p> Legget </p>
 			{% endblock  %}
-		<footer class="footer"> 
-			<small>&copy; 2015, Andreas Hagesjö</small>
+		<footer class="footer group"> 
+			<ul>
+				<li><a href="https://github.com/hagesjo"><img class="img-icon" src="{% static 'main/img/github.png' %}"></a></li>
+				<li><a href="https://www.linkedin.com/in/andreas-hagesj%C3%B6-40a50a66?trk=hp-identity-name"><img class="img-icon" src="{% static 'main/img/linkedin.png' %}"></a></li>
+				<li><a href="https://facebook.com/andreas.hagesjo"><img class="img-icon" src="{% static 'main/img/facebook.png' %}"></a></li>
+				<li><a href="mailto:andreas.hagesjo@gmail.com"><img class="img-icon" src="{% static 'main/img/email.png' %}"></a></li>
+			</ul>
 		</footer>
 		</section>
 	</body>
