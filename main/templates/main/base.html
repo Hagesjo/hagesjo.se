@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="{% static 'main/reset.css' %}"/>
 		<link rel="stylesheet" href="{% static 'main/main.css' %}"/>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100, 300, 400">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100, 300, 400|Roboto">
 		<title>Hagesjo.se - Din kyla i värmen </title>
 	</head>
 
@@ -15,8 +15,8 @@
 			<nav class="nav primary-nav">
 				<ul>
 					{% block nav %}
-					<li><a href="/">About me</a><!--
-					--><li><a href="/links">Useful links</a>
+					<li><a href="/">about me</a><!--
+					--><li><a href="/links">useful links</a>
 					{% endblock  %}
 				</ul>
 			</nav>
@@ -25,7 +25,8 @@
 			{% block content %}
 				<p> Legget </p>
 			{% endblock  %}
-		<footer class="footer group"> 
+		</section>
+		<footer class="container footer group">
 			<ul>
 				<li><a href="https://github.com/hagesjo"><img class="img-icon" src="{% static 'main/img/github.png' %}"></a></li>
 				<li><a href="https://www.linkedin.com/in/andreas-hagesj%C3%B6-40a50a66?trk=hp-identity-name"><img class="img-icon" src="{% static 'main/img/linkedin.png' %}"></a></li>
@@ -33,6 +34,5 @@
 				<li><a href="mailto:andreas.hagesjo@gmail.com"><img class="img-icon" src="{% static 'main/img/email.png' %}"></a></li>
 			</ul>
 		</footer>
-		</section>
 	</body>
 </html>

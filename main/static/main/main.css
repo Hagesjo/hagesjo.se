@@ -1,6 +1,17 @@
+html {
+	height: 100%;
+}
+
 body {
-	font: 400 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background: #C9D8B3;
+	font: 300 16px/23px "Roboto", "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: rgba(255,255,255, 0.8);
+	background-size: cover;
+	background:-webkit-radial-gradient(left, circle, rgb(169,139,128) 0%, rgb(68,64,76) 100%);
+	background:-moz-radial-gradient(left, circle, rgb(169,139,128) 0%, rgb(68,64,76) 100%);
+	background:-ms-radial-gradient(left, circle, rgb(169,139,128) 0%, rgb(68,64,76) 100%);
+	background: radial-gradient(left, circle, rgb(169,139,128) 0%, rgb(68,64,76) 100%);
+	height: 100%;
+	margin: 0;
 }
 
 /* Grid */
@@ -15,13 +26,13 @@ body {
 .grid {
 	margin: 0 auto;
 	width: 960px;
-	border-radius: 10px;
 }
 
 .container {
 	background: #E6EEDC;
-	padding-left: 30px;
-	padding-right: 30px;
+	background: rgba(0,0,0,0.3);
+	padding-left: 60px;
+	padding-right: 60px;
 }
 
 .grid, 
@@ -61,9 +72,13 @@ body {
 	*zoom: 1;
 }
 
-.header {
-	margin-top: 30px;
-	text-transform: uppercase;
+a {
+	color:inherit;
+	transition: all 1s;
+}
+
+a:hover {
+	color: white;
 }
 
 .header a {
@@ -71,64 +86,52 @@ body {
 }
 
 .logo {
-	color: #314C34;
+	font-family: "Roboto";
 	vertical-align: center;
 	text-align: center;
-	font-size: 40px;
-	font-weight: 600;
-	letter-spacing: .2em;
-}
-.nav {
+	font-size: 50px;
 	text-transform: uppercase;
+	font-weight: 100;
+	letter-spacing: 0.05em;
+}
+
+.nav {
 	font-size: 16px;
 	font-weight: 500;
 	letter-spacing: .5px;
 }
 
 .nav ul {
-	-webkit-column-count: 2;
-	-moz-column-count: 2;
-	column-count: 2; 
 	text-align: center;
 }
 
-.current {
-	font-weight: 600;
-}
-
-a {
-	color: #314C34;
-}
-
-a:hover {
-	text-decoration: underline;
-	color: #536737;
-}
-
-p {
-	color: #053C0A;
+.nav li {
+	color: rgba(255,255,255, 0.7);
+	font-size: 22px;
+	display: inline;
+	margin: 60px;
+	font-family: "Lato";
+	font-weight: 400;
 }
 
 .footer {
-	border-top: 1px solid black;
+	margin-top: 3px;
 	padding: 20px;
 }
 
 .main {
 	padding-top: 20px;
-	margin-top: 20px;
-	color: #80985D;
+	margin-top: 3px;
+	background: rgba(00,00,00,0.25);
 }
 
 .main h2 {
-	color: #314C34;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	font-size: 20px;
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: .1em;
-	font-weight: 800;
 }
 
 .right-float {
@@ -136,8 +139,9 @@ p {
 }
 
 .round-img {
-	border-radius: 120px;
+	border-radius: 3px;
 	margin: 30px;
+	padding: 0;
 }
 
 .img-icon {
@@ -156,4 +160,8 @@ p {
 	list-style-type: square;
 	margin-left: 40px;
 	font-size: 16px;
+}
+
+.current {
+	color: white;
 }
