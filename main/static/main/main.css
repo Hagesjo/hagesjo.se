@@ -114,11 +114,6 @@ a:hover {
 	font-weight: 400;
 }
 
-.footer {
-	margin-top: 3px;
-	padding: 20px;
-}
-
 .main {
 	padding-top: 20px;
 	margin-top: 3px;
@@ -148,12 +143,18 @@ a:hover {
 	width: 64px;
 	height: 64px;
 }
+.footer {
+    margin-top: 3px;
+    padding: 20px;
+}
 
 .footer ul {
-	-webkit-column-count: 4;
-	-moz-column-count: 4;
-	column-count: 4; 
-	text-align: center;
+    display: -webkit-flex;
+    display: flex;
+}
+.footer li {
+    text-align: center;
+    width: 25%;
 }
 
 .links {
