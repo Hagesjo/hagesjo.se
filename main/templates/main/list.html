@@ -1,0 +1,12 @@
+{% extends "main/base.html" %}
+{% load staticfiles %}
+{% block content %}
+	{% if header %}<h2> Books </h2> {% endif %}
+	<ul class="links">
+	{% for file in files %}
+		{% with folder|add:file as fullpath %}
+			<li><a href="{% static fullpath %}">{{ file }}</a></p></li>
+		{% endwith %}
+	{% endfor %}
+	</ul>
+{% endblock %}
